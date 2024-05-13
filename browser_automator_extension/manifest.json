@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Automator",
+  "version": "1.0",
+  "description": "Tool used for programming/scripting browser actions.",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "<all_urls>",
+    "tabs",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "lodash.min.js",
+        "content-script.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false,
+    "browser_style": true,
+    "chrome_style": true
+  },
+  "action": {
+    "default_icon": {
+      "32": "icon/icon32.png"
+    },
+    "default_title": "Select elements",
+    "default_popup": "popups/popup.html"
+  },
+  "content_security_policy": {}
+}

@@ -1,0 +1,4 @@
+__pycache__/
+IDlist.json
+venv/
+.venv/

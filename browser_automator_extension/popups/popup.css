@@ -1,0 +1,87 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px; /*jinak je tam nejaky default*/
+  width: 180px;
+  height: 140px;
+}
+
+.div {
+  width: 180px; /* width i tady = buttony zarovnane na stred */
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  color: #24292E;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  outline-color: darkgray;
+  outline-style:solid;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.big {
+  margin: 25px 20px 0px 20px; /* top, right, bottom, left */
+  padding: 6px 16px; 
+}
+
+.medium {
+  margin: 20px 50px;
+  padding: 5px 12px;
+}
+
+.small {
+  margin: 20px 70px;
+  padding: 3px 9px;
+  /*position: absolute;*/ /*elem will be taken out of the flex flow*/
+}
+
+.largelabel {
+  margin: 20px 15px;
+  font-size: medium;
+  text-align: center;
+}
+
+.inputlabel {
+  /*line-height: 18px;*/
+  margin: 6px 20px 6px 20px; /* top, right, bottom, left */
+  inline-size: 210px; /* velikost radku pro zalomeni */
+  word-break: break-all;
+  vertical-align: middle;
+}
+
+input[type='checkbox'] {
+  float: left; /* prevents from breaking too long labels directly under checkbox */
+  width: 16px;
+  height: 16px;
+  position: relative; /* kvuli zarovnani labelu s checkboxy */
+  top: -17%; /* kvuli zarovnani labelu s checkboxy */
+  /*vertical-align: -3px;*/ /* nefunguje s floatem */
+}
+
+input[type='radio'] {
+  float: left; /* prevents from breaking too long labels directly under checkbox */
+  width: 14px;
+  height: 14px;
+  position: relative; /* kvuli zarovnani labelu s checkboxy */
+  top: -21%; /* kvuli zarovnani labelu s checkboxy */
+  /*vertical-align: -3px;*/ /* nefunguje s floatem */
+}
+
+/*
+.button:active {
+  outline-color: red;
+}
+*/
+
+.button:hover {
+  background-color: rgb(240, 239, 239);
+}
